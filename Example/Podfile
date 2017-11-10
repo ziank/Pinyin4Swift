@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Pinyin4Swift_Example' do
+  pod 'Pinyin4Swift', :path => '../'
+
+  target 'Pinyin4Swift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
