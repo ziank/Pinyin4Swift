@@ -9,6 +9,12 @@ import Foundation
 
 extension Bundle {
     class func myBundle() -> Bundle? {
-        return Bundle(for: PinyinHelper.self)
+        
+        let bundle = Bundle(for: PinyinHelper.self)
+        if let path = bundle.path(forResource: "Pinyin4Swift", ofType: "bundle") {
+            return Bundle(path: path)
+        } else {
+            return nil
+        }
     }
 }
