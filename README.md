@@ -22,7 +22,7 @@ pod 'Pinyin4Swift'
 
 ## Author
 
-ziank, zhaixq@rd.netease.com
+ziank, zhaixianqi0111@163.com
 
 ## License
 
