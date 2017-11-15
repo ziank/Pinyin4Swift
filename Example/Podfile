@@ -5,7 +5,5 @@ target 'Pinyin4Swift_Example' do
 
   target 'Pinyin4Swift_Tests' do
     inherit! :search_paths
-
-    
   end
 end

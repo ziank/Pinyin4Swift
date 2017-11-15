@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Pinyin4Swift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(PinyinHelper.toPinyinStringWithString("天下", outputFormat: OutputFormat(vCharType: .uUnicode, caseType: .lower, toneType: .toneMark)))
+        
+        print(PinyinHelper.toPinyinStringArrayWithChar("乐", outputFormat: OutputFormat(vCharType: .uUnicode, caseType: .lower, toneType: .toneMark)))
     }
 
     override func didReceiveMemoryWarning() {
