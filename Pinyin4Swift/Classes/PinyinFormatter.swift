@@ -42,19 +42,19 @@ class PinyinFormatter {
 
 
     class func formatPinyinWithString(_ pinyinString:String, outputFormat:OutputFormat) -> String {
-        var targetString = ""
+        var targetString = pinyinString
         if outputFormat.toneType == ToneType.toneMark {
-            targetString = pinyinString.replacingOccurrences(of: "u:", with: "v")
+            targetString = targetString.replacingOccurrences(of: "u:", with: "v")
             targetString = self.convertToneNumberToToneMarkWithString(targetString)
         } else {
             if outputFormat.toneType == ToneType.noTone {
-                targetString = pinyinString.replacingOccurrences(of: "[1-5]", with: "", options: .regularExpression)
+                targetString = targetString.replacingOccurrences(of: "[1-5]", with: "", options: .regularExpression)
             }
 
             if outputFormat.vCharType == .v {
-                targetString = pinyinString.replacingOccurrences(of: "u:", with: "v")
+                targetString = targetString.replacingOccurrences(of: "u:", with: "v")
             } else if outputFormat.vCharType == .uUnicode {
-                targetString = pinyinString.replacingOccurrences(of: "u:", with: "ü")
+                targetString = targetString.replacingOccurrences(of: "u:", with: "ü")
             }
         }
 
@@ -62,7 +62,7 @@ class PinyinFormatter {
             targetString = targetString.uppercased()
         }
 
-        return targetString.isEmpty ? pinyinString : targetString
+        return targetString
     }
 
     class func convertToneNumberToToneMarkWithString(_ pinyinStr:String) -> String {

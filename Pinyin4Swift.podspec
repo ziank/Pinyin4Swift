@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Pinyin4Swift'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'Pinyin4Swift.'
 
 # This description is used to generate tags and improve search results.

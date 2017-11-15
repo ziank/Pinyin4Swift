@@ -44,10 +44,10 @@ public class PinyinHelper: NSObject {
         }
     }
 
-    public class func toPinyinStringWithString(_ str:String, outputFormat:OutputFormat, seperater:String, outputBlock:@escaping OutputStringBlock) {
+    public class func getPinyinStringWithString(_ str:String, outputFormat:OutputFormat, seperater:String, outputBlock:@escaping OutputStringBlock) {
 
         DispatchQueue.global().async {
-            let resultPinyinStr = toPinyinStringWithString(str, outputFormat: outputFormat, seperater: seperater)
+            let resultPinyinStr = getPinyinStringWithString(str, outputFormat: outputFormat, seperater: seperater)
             DispatchQueue.main.async {
                 outputBlock(resultPinyinStr)
             }
@@ -57,6 +57,15 @@ public class PinyinHelper: NSObject {
     public class func getFirstPinyinStringWithChar(_ ch:UnicodeScalar, outputFormat:OutputFormat, outputBlock:@escaping OutputStringBlock) {
         getFormattedPinyinStringArrayWithChar(ch, outputFormat: outputFormat) { strings in
             outputBlock(strings.isEmpty ? "" : strings[0])
+        }
+    }
+    
+    public class func getHeaderLettersWithString(_ str:String, outputBlock:@escaping OutputStringBlock) {
+        DispatchQueue.global().async {
+            let resultStr = getHeaderLettersWithString(str)
+            DispatchQueue.main.async {
+                outputBlock(resultStr)
+            }
         }
     }
 
@@ -82,12 +91,14 @@ public class PinyinHelper: NSObject {
         return PinyinResource.instance.getPinyinStringArrayWithChar(ch)
     }
 
-    public class func toPinyinStringWithString(_ str:String, outputFormat:OutputFormat=OutputFormat.default, seperater:String=" ") -> String {
+    public class func getPinyinStringWithString(_ str:String, outputFormat:OutputFormat=OutputFormat.default, seperater:String=" ") -> String {
         var resultPinyinStr = ""
         str.unicodeScalars.forEach { scalar in
             let ch_str = getFirstPinyinStringWithChar(scalar, outputFormat: outputFormat)
-            resultPinyinStr += ch_str
-            resultPinyinStr += seperater
+            if !ch_str.isEmpty {
+                resultPinyinStr += ch_str
+                resultPinyinStr += seperater
+            }
         }
         return resultPinyinStr
     }
@@ -95,5 +106,16 @@ public class PinyinHelper: NSObject {
     public class func getFirstPinyinStringWithChar(_ ch: UnicodeScalar, outputFormat:OutputFormat) -> String {
         let pinyinArray = getFormattedPinyinStringArrayWithChar(ch, outputFormat: outputFormat)
         return pinyinArray.isEmpty ? "" : pinyinArray[0]
+    }
+    
+    public class func getHeaderLettersWithString(_ str:String) -> String {
+        var resultStr = ""
+        str.unicodeScalars.forEach { scalar in
+            let ch_str:String = getFirstPinyinStringWithChar(scalar, outputFormat: OutputFormat.default)
+            if !ch_str.isEmpty {
+                resultStr.append(ch_str.uppercased().first!)
+            }
+        }
+        return resultStr
     }
 }
