@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0032A8A19CE3B57B512E82A8 /* Pods-Pinyin4Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinyin4Swift_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinyin4Swift_Example/Pods-Pinyin4Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		49823A22319A8A457B3BF12F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		49823A22319A8A457B3BF12F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Pinyin4Swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinyin4Swift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +43,9 @@
 		90049C4FCD9F9F9E11BABCAE /* Pods-Pinyin4Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinyin4Swift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinyin4Swift_Tests/Pods-Pinyin4Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6224E4187B531054346D792 /* Pods-Pinyin4Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinyin4Swift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinyin4Swift_Tests/Pods-Pinyin4Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B94811FE7ADD3D9F843DE2C4 /* Pods-Pinyin4Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinyin4Swift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinyin4Swift_Example/Pods-Pinyin4Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C48C093058AFFC7B91CC006E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C48C093058AFFC7B91CC006E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E7CC556D5BA287771A68D244 /* Pods_Pinyin4Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinyin4Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8CC04FCC68D1940C98A768F /* Pinyin4Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Pinyin4Swift.podspec; path = ../Pinyin4Swift.podspec; sourceTree = "<group>"; };
+		E8CC04FCC68D1940C98A768F /* Pinyin4Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Pinyin4Swift.podspec; path = ../Pinyin4Swift.podspec; sourceTree = "<group>"; };
 		F47ABA637156F770B1032607 /* Pods_Pinyin4Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinyin4Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,7 +89,6 @@
 				607FACD11AFB9204008FA782 /* Products */,
 				474EC19374811183BE967FE2 /* Pods */,
 				FF237234A51A76743698E991 /* Frameworks */,
-				884848902EBF343EF3C42CB1 /* OutputFormat.swift */,
 			);
 			sourceTree = "<group>";
 		};
