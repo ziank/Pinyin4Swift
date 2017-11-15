@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Pinyin4Swift'
   s.version          = '1.0.0'
-  s.summary          = 'Pinyin4Swift.'
+  s.summary          = 'Pinyin4Swift is a lib to transform Chinese to Pinyin just like Pinyin4Objc.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-转换汉字内容到拼音。
+Pinyin4Swift is a lib to transform Chinese to Pinyin.
                        DESC
 
   s.homepage         = 'https://github.com/ziank/Pinyin4Swift'
